@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+		
+		<style>
+			@font-face {
+				font-family: Montserrat;
+				src: url('Montserrat.ttf');
+			}
+			
+			body {
+				background: black;
+				font-family: Montserrat;
+				font-size: 12px;
+			}
+			
+			.page-container {
+				background: rgb(0,0,0);
+				background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 34%, rgba(0,0,0,0) 64%, rgba(0,0,0,0.6796919451374299) 100%);
+				position: relative;
+				z-index: 500;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			.footer-section {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100px;
+				width: 100%;
+			}
+			
+			.header-section {
+				height: 100px;
+				width: 100%;
+			}
+			
+			.ar-section {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+			}
+			
+			.viewport {
+				flex-grow: 1;
+			}
+			
+			.button {
+				border: 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.9);
+				height: 49px;
+				width: 265px;
+				border-radius: 50px;
+				background: rgb(208,208,208);
+				background: linear-gradient(180deg, rgba(214,222,229,0.65) 0%, rgba(205,205,205,0.05) 100%);
+				margin-inline: 15px;
+				transition: box-shadow 0.15s;
+				display: flex;
+				align-items: center;
+				padding-inline: 17px;
+				backdrop-filter: blur(4px);
+			}
+			.button:hover, .button-active {
+				box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+			}
+			
+			.middle-button > img {
+				width: 15px;
+			}
+			
+			.header-text {
+				text-align: right;
+				margin-right: 20px;
+				font-size: 13px;
+				color: white;
+			}
+			.footer-text {
+				color: white;
+				margin-bottom: 5px;
+			}
+			.shop-text {
+				color: white;
+				font-family: Montserrat;
+				font-size: 14px;
+			}
+			
+			.a-loader-title {
+				height: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page-container">
+		
+			<div class="header-section">
+				<p class="header-text">SHIDIFOO X PROTOGEN 3D</p>
+				<p class="header-text">'NEW DIMENSION'</p>
+			</div>
+		
+			<div class="viewport">
+				
+			</div>
+			
+			<div class="footer-section">
+				<button class="button middle-button" onclick="window.location.href='https://www.etsy.com/uk/shop/DimensionFactory?ref=seller-platform-mcnav';">
+					<span class="shop-text">DIMENSION FACTORY</span>
+					<svg style="margin-inline: auto" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.48129C0 7.28238 0.0790175 7.09161 0.21967 6.95096C0.360322 6.81031 0.551088 6.73129 0.75 6.73129H13.94L8.47 1.26129C8.33752 1.11912 8.2654 0.93107 8.26882 0.736769C8.27225 0.542468 8.35097 0.357083 8.48838 0.21967C8.62579 0.0822568 8.81118 0.00354506 9.00548 0.000116847C9.19978 -0.00331137 9.38782 0.0688116 9.53 0.201292L16.28 6.95129C16.4205 7.09192 16.4993 7.28254 16.4993 7.48129C16.4993 7.68004 16.4205 7.87067 16.28 8.01129L9.53 14.7613C9.46134 14.835 9.37854 14.8941 9.28654 14.9351C9.19454 14.9761 9.09522 14.9981 8.99452 14.9999C8.89382 15.0017 8.79379 14.9831 8.7004 14.9454C8.60701 14.9077 8.52218 14.8515 8.45096 14.7803C8.37974 14.7091 8.3236 14.6243 8.28588 14.5309C8.24816 14.4375 8.22963 14.3375 8.23141 14.2368C8.23318 14.1361 8.25523 14.0368 8.29622 13.9448C8.33721 13.8528 8.39631 13.77 8.47 13.7013L13.94 8.23129H0.75C0.551088 8.23129 0.360322 8.15227 0.21967 8.01162C0.0790175 7.87097 0 7.6802 0 7.48129Z" fill="white"/>
+</svg>
+					<svg width="27" height="27" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.52873 2.8125C5.90748 2.8125 5.31123 3.06 4.87248 3.5L3.24748 5.1225C2.40776 5.96066 1.91712 7.08605 1.87449 8.27173C1.83186 9.4574 2.24043 10.6151 3.01779 11.5114C3.79515 12.4077 4.88346 12.9759 6.06324 13.1014C7.24303 13.2268 8.4265 12.9003 9.37498 12.1875C10.1587 12.775 11.1325 13.125 12.1875 13.125C13.2425 13.125 14.2175 12.775 15 12.1875C15.7825 12.775 16.7575 13.125 17.8125 13.125C18.8675 13.125 19.8412 12.775 20.625 12.1875C21.5735 12.9003 22.7569 13.2268 23.9367 13.1014C25.1165 12.9759 26.2048 12.4077 26.9822 11.5114C27.7595 10.6151 28.1681 9.4574 28.1255 8.27173C28.0828 7.08605 27.5922 5.96066 26.7525 5.1225L25.1275 3.49875C24.6882 3.05954 24.0924 2.81272 23.4712 2.8125H6.52873Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 25.3125V14.3687C5.525 15.2112 7.6 15.21 9.375 14.3687C10.2539 14.7856 11.2147 15.0013 12.1875 15C13.1925 15 14.1475 14.7725 15 14.3675C15.8788 14.7848 16.8396 15.0009 17.8125 15C18.8175 15 19.7712 14.7725 20.625 14.3675C22.4 15.21 24.475 15.2112 26.25 14.3687V25.3125H27.1875C27.4361 25.3125 27.6746 25.4113 27.8504 25.5871C28.0262 25.7629 28.125 26.0014 28.125 26.25C28.125 26.4986 28.0262 26.7371 27.8504 26.9129C27.6746 27.0887 27.4361 27.1875 27.1875 27.1875H2.8125C2.56386 27.1875 2.3254 27.0887 2.14959 26.9129C1.97377 26.7371 1.875 26.4986 1.875 26.25C1.875 26.0014 1.97377 25.7629 2.14959 25.5871C2.3254 25.4113 2.56386 25.3125 2.8125 25.3125H3.75ZM7.5 17.8125C7.5 17.5639 7.59877 17.3254 7.77459 17.1496C7.9504 16.9738 8.18886 16.875 8.4375 16.875H12.1875C12.4361 16.875 12.6746 16.9738 12.8504 17.1496C13.0262 17.3254 13.125 17.5639 13.125 17.8125V21.5625C13.125 21.8111 13.0262 22.0496 12.8504 22.2254C12.6746 22.4012 12.4361 22.5 12.1875 22.5H8.4375C8.18886 22.5 7.9504 22.4012 7.77459 22.2254C7.59877 22.0496 7.5 21.8111 7.5 21.5625V17.8125ZM17.8125 16.875C17.5639 16.875 17.3254 16.9738 17.1496 17.1496C16.9738 17.3254 16.875 17.5639 16.875 17.8125V24.375C16.875 24.8925 17.295 25.3125 17.8125 25.3125H21.5625C21.8111 25.3125 22.0496 25.2137 22.2254 25.0379C22.4012 24.8621 22.5 24.6236 22.5 24.375V17.8125C22.5 17.5639 22.4012 17.3254 22.2254 17.1496C22.0496 16.9738 21.8111 16.875 21.5625 16.875H17.8125Z" fill="white"/>
+</svg>
+				</button>
+			</div>
+			
+			<span class="footer-text">3D PRINTED ARTWORK</span>
+			
+		</div>
+		
+		<div class="ar-section">
+			<a-scene mindar-image="imageTargetSrc: targets.mind; filterMinCF: 0.0000001;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+				<a-assets>
+					<img id="card" src="Back_with_QR.png" />
+					<a-asset-item id="avatarModel" src="TV_girl_with_lighting.gltf"></a-asset-item>
+				</a-assets>
+			
+				<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+				<a-entity mindar-image-target="targetIndex: 0">
+					<a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+					<a-gltf-model rotation="65 0 0" position="0 0 -0.25" scale="0.2 0.2 0.2" src="#avatarModel" animation="property: position; to: 0 0 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+				</a-entity>
+			</a-scene>
+		</div>
+		
+	</body>
+</html>
